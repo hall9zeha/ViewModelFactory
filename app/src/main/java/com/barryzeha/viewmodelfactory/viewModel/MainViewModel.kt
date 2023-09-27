@@ -9,8 +9,8 @@ import androidx.lifecycle.ViewModel
  * Copyright (c)  All rights reserved.
  **/
 
-class MainViewModel : ViewModel(){
-  var count =0
+class MainViewModel (initVal:Int): ViewModel(){
+  var count =initVal
   fun increment(){
    count++;
   }
