@@ -12,5 +12,11 @@ import com.barryzeha.viewmodelfactory.data.repository.MainRepository
  **/
 
 class ThirdViewModel(private val repository: MainRepository, private val savedStateHandle: SavedStateHandle): ViewModel() {
-
+    var count=0
+    fun getIncrement(){
+        count = repository.getIncrement()
+    }
+    init {
+        count = repository.getIncrement()
+    }
 }
