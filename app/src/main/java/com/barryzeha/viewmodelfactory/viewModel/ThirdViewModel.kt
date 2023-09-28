@@ -1,18 +1,16 @@
 package com.barryzeha.viewmodelfactory.viewModel
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.barryzeha.viewmodelfactory.data.repository.MainRepository
 
 
 /**
  * Project ViewModelFactory
- * Created by Barry Zea H. on 27/9/23.
+ * Created by Barry Zea H. on 28/9/23.
  * Copyright (c)  All rights reserved.
  **/
 
-class MainViewModel (initVal:Int): ViewModel(){
-  var count =initVal
-  fun increment(){
-   count++;
-  }
+class ThirdViewModel(private val repository: MainRepository, private val savedStateHandle: SavedStateHandle): ViewModel() {
+
 }
